@@ -15,6 +15,17 @@ public class GrupoController : Controller
 
     public IActionResult selectIntegrante(int dni)
     {
-        
+        Grupo grupo = ViewBag.grupo;
+        Integrante integrante = grupo.GetIntegrante(dni);
+
+        if(grupo.GetIntegrante(dni) == null)
+        {
+            return RedirectToAction("NoEncontrado", "Integrantes");
+        }
+        else
+        {
+            ViewBag.integrante = integrante;
+            return View(); 
+        }
     }
 }

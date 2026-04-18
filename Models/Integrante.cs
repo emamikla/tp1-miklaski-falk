@@ -18,4 +18,29 @@ public class Integrante{
         familiares = new List<string>();
         intereses = new List<string>();
     }
+
+    public int getDni()
+    {
+        return dni;
+    }
+    public string getNombre()
+    {
+        return nombre;
+    }
+    public DateTime getFechaNacimiento()
+    {
+        return fechaNacimiento;
+    }
+    public string getFoto()
+    {
+        return foto;
+    }
+    public List<string> getFamiliares()
+    {
+        return familiares;
+    }
+    public List<string> getIntereses()
+    {
+        return intereses;
+    }
 }

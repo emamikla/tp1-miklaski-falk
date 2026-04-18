@@ -2,11 +2,11 @@ namespace tp1_miklaski_falk.Models;
 
 public class Grupo
 {
-    private Dictionary<int, Integrante> integrantes;
+    private Dictionary<int, Integrante> dicIntegrantes;
 
     public Grupo()
     {
-        integrantes = new Dictionary<int, Integrante>();
+        dicIntegrantes = new Dictionary<int, Integrante>();
     }
 
     public void CargaDatosManual()
@@ -15,18 +15,18 @@ public class Grupo
     }
     public Dictionary<int, Integrante> devolverIntegrantes()
     {
-        
+        return dicIntegrantes;
     }
 
     public Integrante GetIntegrante(int dni)
     {
-        if(dicAlumnos[dni] == null)
+        if(dicIntegrantes[dni] == null)
         {
             return null;
         }
         else
         {
-            return dicAlumnos[dni];
+            return dicIntegrantes[dni];
         }
     }
 
