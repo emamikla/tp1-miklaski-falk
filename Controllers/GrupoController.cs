@@ -9,23 +9,24 @@ public class GrupoController : Controller
     public IActionResult Index()
     {
         Grupo grupo = new Grupo();
+        grupo.CargaDatosManual();
         ViewBag.grupo = grupo;
         return View();
     }
 
     public IActionResult selectIntegrante(int dni)
     {
-        Grupo grupo = ViewBag.grupo;
-        Integrante integrante = grupo.GetIntegrante(dni);
+        Dictionary<int, Integrante> dicGrupo = ViewBag.grupo.devolverIntegrantes();
 
-        if(grupo.GetIntegrante(dni) == null)
+        if(dicGrupo.ContainsKey(dni))
         {
-            return RedirectToAction("NoEncontrado", "Integrantes");
-        }
-        else
-        {
+            Integrante integrante = dicGrupo[dni];
             ViewBag.integrante = integrante;
             return View(); 
+            }
+        else
+        {
+            return RedirectToAction("NoEncontrado", "Grupo");
         }
     }
 }
