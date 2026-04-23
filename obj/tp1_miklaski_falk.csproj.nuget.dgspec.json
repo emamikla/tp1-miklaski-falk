@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\49628417\\Desktop\\TP1\\tp1-miklaski-falk\\tp1_miklaski_falk.csproj": {}
+    "C:\\Users\\49628417\\Desktop\\tp1\\tp1-miklaski-falk\\tp1_miklaski_falk.csproj": {}
   },
   "projects": {
-    "C:\\Users\\49628417\\Desktop\\TP1\\tp1-miklaski-falk\\tp1_miklaski_falk.csproj": {
+    "C:\\Users\\49628417\\Desktop\\tp1\\tp1-miklaski-falk\\tp1_miklaski_falk.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\49628417\\Desktop\\TP1\\tp1-miklaski-falk\\tp1_miklaski_falk.csproj",
+        "projectUniqueName": "C:\\Users\\49628417\\Desktop\\tp1\\tp1-miklaski-falk\\tp1_miklaski_falk.csproj",
         "projectName": "tp1_miklaski_falk",
-        "projectPath": "C:\\Users\\49628417\\Desktop\\TP1\\tp1-miklaski-falk\\tp1_miklaski_falk.csproj",
+        "projectPath": "C:\\Users\\49628417\\Desktop\\tp1\\tp1-miklaski-falk\\tp1_miklaski_falk.csproj",
         "packagesPath": "C:\\Users\\49628417\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\49628417\\Desktop\\TP1\\tp1-miklaski-falk\\obj\\",
+        "outputPath": "C:\\Users\\49628417\\Desktop\\tp1\\tp1-miklaski-falk\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

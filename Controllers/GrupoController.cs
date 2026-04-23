@@ -16,14 +16,17 @@ public class GrupoController : Controller
 
     public IActionResult selectIntegrante(int dni)
     {
-        Dictionary<int, Integrante> dicGrupo = ViewBag.grupo.devolverIntegrantes();
+        Grupo grupo = new Grupo();
+        grupo.CargaDatosManual();
+        Dictionary<int, Integrante> dicGrupo = grupo.devolverIntegrantes();
 
         if(dicGrupo.ContainsKey(dni))
         {
             Integrante integrante = dicGrupo[dni];
             ViewBag.integrante = integrante;
-            return View(); 
-            }
+            ViewBag.dni = dni;
+            return View("InfoIntegrante");
+        }
         else
         {
             return RedirectToAction("NoEncontrado", "Grupo");
