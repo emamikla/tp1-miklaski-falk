@@ -30,10 +30,17 @@ body {
   text-align: start;
 }
 
-section div{
-  margin-top: 3%;
-  margin-bottom: 3%;
-}
+
 section div img{
-  width: 30%;
+  width: 50%;
+}
+.index-div{
+  width: 31%;
+  float: left;
+  margin: 1%;
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem rgb(96, 117, 87);
+}
+.link-index{
+text-decoration: none;
+color: #37352F;
 }

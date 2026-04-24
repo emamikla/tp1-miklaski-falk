@@ -1,4 +1,38 @@
-<h2>Nombre: @ViewBag.Integrante.getNombre();</h2>
-<p>Fecha de nacimiento: @ViewBag.integrante.getFechaNacimiento();</p>
-<p>DNI: @ViewBag.integrante.getDni();</p>
-<p> </p>
+<body>
+    <main>
+        <section>
+            <div>
+                <h2>Nombre: @ViewBag.Integrante.getNombre();</h2>
+            </div>
+            <div>
+                <p>Fecha de nacimiento: @ViewBag.integrante.getFechaNacimiento();</p>
+            </div>
+            <div>
+                <p>DNI: @ViewBag.integrante.getDni();</p>
+            </div>
+        </section>
+        <section>
+            <h4>Familiares: </h4>
+            <div>
+                @foreach(string familiar in ViewBag.integrante.getFamiliares())
+                {
+                    <p>
+                        @familiar
+                    </p>
+                }
+            </div>
+        </section>
+        <section>
+            <h4>Intereses: </h4>
+            <div>
+                @foreach(string intereses in ViewBag.integrante.getIntereses())
+                {
+                    <p>
+                        @intereses
+                    </p>
+                }
+            </div>
+            <h5><a href='@Url.Action("index","Grupo")'>Volver al menú del grupo</a><br></h5>
+        </section>
+    </main>
+</body>

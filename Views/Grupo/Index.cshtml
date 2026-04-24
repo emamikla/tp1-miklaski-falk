@@ -3,17 +3,18 @@
 }
 
 <section class="catalog-hero">
-    <h1 class="catalog-title">EL MEJOR GRUPO 😊</h1> <img src="~/image.png">
-    <p class="catalog-subtitle">Seleccioná la persona que desees para ver mas información de esta</p>
+    <h1>EL MEJOR GRUPO 😊</h1> <img src="~/image.png">
+    <h5>Seleccioná la persona que desees para ver mas información de esta</h5>
 </section>
 
 <section class="product-grid">
     @foreach(Integrante objIntegrante in ViewBag.grupo.devolverIntegrantes().Values)
     {
-        <div>
+        <div class="index-div"><a class="link-index" href='@Url.Action("selectIntegrante","Grupo", new { dni = objIntegrante.getDni()})'>
+             
             <img src="~/@objIntegrante.getFoto()">
             <h3>@objIntegrante.getNombre()</h3>
-            <a href='@Url.Action("selectIntegrante","Grupo", new { dni = objIntegrante.getDni()})'>Ver detalle</a><br>
-        </div>
+            <p>Ver detalle</p>
+        </a></div>
     }
 </section>
